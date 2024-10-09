@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "EXGecko",
+  "version": "1.0.3",
+  "description": "このプラグインは、eライブラリーでチートを使用します。",
+	"icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://ela.education.ne.jp/students/*"],
+    "run_at": "document_end",
+    "all_frames": true,
+    "js": ["content-script.js"]
+  }],
+  "permissions": ["scripting", "activeTab"]
+}
